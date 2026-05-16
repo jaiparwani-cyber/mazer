@@ -40,7 +40,7 @@
     top: 0;
     z-index: 10;
     overflow-y: auto;
-    background-color: $sidebar-bg;
+    background-color: #1e293b;
     bottom: 0;
     transition: left .7s cubic-bezier(0.22, 1, 0.36, 1);
     .sidebar-header {
@@ -79,12 +79,13 @@
             font-size: 1rem;
             display: flex;
             align-items: center;
-            border-radius: .5rem;
-            transition: all .5s;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            transition: all .3s ease;
             text-decoration: none;
-            color: $sidebar-link-color;
+            color: rgba(255, 255, 255, .82);
             svg,i {
-                color:#7c8db5;
+                color: rgba(255, 255, 255, .68);
             }
             i:before {
                 vertical-align: top;
@@ -93,7 +94,8 @@
                 margin-left: 1rem;
             }
             &:hover {
-                background-color: $sidebar-link-hover-bg;
+                background: rgba(255,255,255,0.08);
+                color: #fff;
             }
         }
         .sidebar-item {
@@ -108,7 +110,7 @@
                     }
                 }
                 >.sidebar-link {
-                    background-color: $primary;
+                    background: #4f46e5;
                     span {
                         color: #fff;
                     }

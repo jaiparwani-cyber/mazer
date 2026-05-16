@@ -16,13 +16,13 @@ $dark-mode: false !default;
 @import "~bootstrap/scss/functions";
 
 $theme-colors-light: (
-  'primary': #ebf3ff,
-  'secondary': #E6EAEE,
-  'success': #D2FFE8 ,
-  'danger': #FFDEDE,
-  'warning': #fffdd8,
-  'info': #e6fdff,
-  'dark': #e3e3e3
+'primary': #4f46e5,
+'secondary': #64748b,
+'success': #10b981,
+'info': #0ea5e9,
+'warning': #f59e0b,
+'danger': #ef4444,
+'dark': #1e293b
 ) !default;
 
 $alert-colors: (
@@ -157,12 +157,12 @@ $colors: (
 ) !default;
 // scss-docs-end colors-map
 
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
+$primary:       #4f46e5 !default;
+$secondary:     #64748b !default;
+$success:       #10b981 !default;
+$info:          #0ea5e9 !default;
+$warning:       #f59e0b !default;
+$danger:        #ef4444 !default;
 $light:         $gray-400 !default;
 $dark:          $body-bg;
 

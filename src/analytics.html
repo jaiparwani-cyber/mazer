@@ -1,0 +1,24 @@
+{% set title = 'Analytics' %}
+{% set filename = 'analytics.html' %}
+
+{% extends 'src/layouts/master.html' %}
+
+{% block content %}
+<div class="page-heading">
+    <h3 class="mb-4 fw-bold">Analytics</h3>
+</div>
+<div class="page-content">
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header">
+            <h4>Students by Age Group</h4>
+        </div>
+        <div class="card-body">
+            <canvas id="studentChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="module" src="/js/charts.js"></script>
+{% endblock %}

@@ -20,10 +20,18 @@
             {% include "src/layouts/sidebar.html" %}
         </div>
         <div id="main">
-            <header class="mb-3">
+            <header class="mb-3 d-flex align-items-center justify-content-between gap-3">
                 <a href="#" class="burger-btn d-block d-xl-none">
                     <i class="bi bi-justify fs-3"></i>
                 </a>
+                <div class="d-flex align-items-center gap-3 ms-auto">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </button>
+                    </div>
+                </div>
             </header>
             {% block content %}{% endblock %}
             {% include '../partials/footer.html' %}

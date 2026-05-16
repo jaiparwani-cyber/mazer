@@ -1,136 +1,415 @@
-<h1 align="center">Mazer Dashboard</h1>
+# EduAdmin – Student Analytics Dashboard
 
-![Mazer Screenshot](https://user-images.githubusercontent.com/45036724/167523601-9d20fb17-1989-488f-b619-cb53c0db8898.png)
+A customized version of the Mazer Bootstrap 5 admin template transformed into a Student Analytics Dashboard.
 
-<p align="center">Mazer is an Admin Dashboard Template that can help you develop faster. Made with Bootstrap 5. No jQuery dependency.</p>
-<div align="center">
+This project demonstrates real-world frontend customization and integration skills by adapting an existing admin dashboard instead of building one from scratch.
 
-[![All Contributors](https://img.shields.io/github/contributors/zuramai/mazer)](https://github.com/zuramai/mazer/graphs/contributors)
-![GitHub last commit](https://img.shields.io/github/last-commit/zuramai/mazer.svg)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/zuramai/mazer)
-[![License](https://img.shields.io/github/license/zuramai/mazer.svg)](LICENSE)
+The dashboard focuses on:
+- UI/UX improvements
+- API integration
+- Dynamic data rendering
+- Dashboard analytics
+- Responsive design
+- Reusable frontend architecture
 
-</div>
+---
 
-<p align="center">
-	<a href="http://zuramai.github.io/mazer/demo">Demo Page</a>&nbsp;&nbsp;&nbsp;
-	<a href="http://zuramai.github.io/mazer/docs">Documentation Page</a>&nbsp;&nbsp;&nbsp;
-	<a href="https://github.com/zuramai/mazer/blob/main/README_INDONESIAN.md">Indonesian README</a>&nbsp;&nbsp;&nbsp;
-</p>
+# Project Objective
 
+The objective of this assessment was to:
 
-## Installation
+- Understand and modify an existing frontend codebase
+- Customize UI components meaningfully
+- Integrate external API data into the dashboard
+- Improve user experience while preserving template structure
+- Demonstrate practical frontend engineering skills
 
-### Using a ready-made built (recommended)
+Instead of redesigning the entire template, the project adapts the existing Mazer architecture into a coherent education analytics platform.
 
-Download the latest release from the [releases page](https://github.com/zuramai/mazer/releases "releases page").
-Open the index HTML file and explore the source code.
+---
 
-### Building yourself
+# Project Theme
 
-1. Clone the repository 
-```sh
-git clone https://github.com/zuramai/mazer
+## EduAdmin – Student Management Dashboard
+
+The default Mazer dashboard was converted into a student analytics/admin dashboard containing:
+
+- Student statistics
+- Student management table
+- Analytics charts
+- Search functionality
+- Dynamic API-based rendering
+- Responsive admin UI
+
+---
+
+# Technologies Used
+
+- HTML5
+- SCSS
+- Bootstrap 5
+- JavaScript (ES6 Modules)
+- Vite
+- Chart.js
+- DummyJSON API
+
+---
+
+# Setup Instructions
+
+## 1. Clone Repository
+
+```bash
+git clone <your-forked-repo-url>
 ```
 
-2. Install dependencies
-```sh
-yarn install
-# OR
+---
+
+## 2. Install Dependencies
+
+```bash
 npm install
 ```
 
-3. Run it locally
-```sh
+If dependency conflicts occur:
+
+```bash
+npm install --legacy-peer-deps
+```
+
+---
+
+## 3. Start Development Server
+
+```bash
 npm run dev
 ```
 
-4. Open `http://localhost:5173` in your browser
+---
 
-### Building with Docker
+## 4. Open Browser
 
-- Clone the repository `git clone https://github.com/zuramai/mazer`
-- Make sure you have Docker installed and run:
-    - `docker build -t mazer-frontend .`
-    - `docker run -it -d -p 5173:80 --name mazer mazer-frontend`
-    - Open `http://localhost:5173`
-### Using CDN 
-Simple example using CDN from [jsdelivr.net](https://www.jsdelivr.com/).
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
-
-    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/svg/favicon.svg" type="image/x-icon">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app-dark.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/iconly.css">
-</head>
-
-<body>
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/initTheme.js"></script>
-    <!-- Start content here -->
-
-    <!-- End content -->
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/components/dark.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/js/app.js"></script>
-
-    <!-- Need: Apexcharts -->
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/extensions/apexcharts/apexcharts.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/static/js/pages/dashboard.js"></script>
-</body>
-
-</html>
+```text
+http://localhost:5173
 ```
 
-#### CDN Prefix
+---
 
-You can use the url with a prefix like this:
+# Major Customizations
+
+## 1. Dashboard Rebranding
+
+The default Mazer branding and navigation were customized to create a dedicated education analytics platform.
+
+### Changes
+- Replaced generic dashboard structure
+- Updated sidebar navigation
+- Simplified menu hierarchy
+- Created coherent project identity
+
+### Sidebar Navigation
+- Dashboard
+- Students
+- Analytics
+- Settings
+
+---
+
+## 2. UI/UX Improvements
+
+The original UI was modernized while preserving Mazer’s architecture.
+
+### Improvements Made
+
+#### Color Theme Customization
+
+Updated dashboard theme colors for a cleaner SaaS-style appearance.
+
+```scss
+'primary': #4f46e5,
+'secondary': #64748b,
+'success': #10b981,
+'info': #0ea5e9,
+'warning': #f59e0b,
+'danger': #ef4444,
+'dark': #1e293b
 ```
-https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo
+
+---
+
+#### Card Enhancements
+
+Improved dashboard cards using:
+- Rounded corners
+- Better spacing
+- Hover effects
+- Cleaner shadows
+
+```scss
+.card {
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
 ```
 
-A simple example:
+---
+
+#### Sidebar UX Improvements
+
+Enhanced:
+- Active menu states
+- Hover feedback
+- Visual hierarchy
+- Navigation readability
+
+---
+
+#### Responsive Improvements
+
+Used Bootstrap utilities such as:
+- `table-responsive`
+- responsive grid system
+- spacing utilities
+
+to ensure proper mobile responsiveness.
+
+---
+
+# Dashboard KPI Cards
+
+The default analytics cards were replaced with student-related metrics.
+
+## Added Metrics
+
+- Total Students
+- Active Courses
+- Attendance Rate
+- New Registrations
+
+The “Total Students” value is dynamically populated using API data.
+
+---
+
+# API Integration
+
+## API Used
+
+https://dummyjson.com/users
+
+---
+
+# Why This API Was Chosen
+
+The API provides realistic user data including:
+- first name
+- last name
+- email
+- age
+- university
+- phone number
+
+This makes it suitable for simulating a student management system.
+
+---
+
+# API Architecture
+
+A separate reusable API layer was created:
+
+```text
+src/js/api.js
 ```
-https://cdn.jsdelivr.net/gh/zuramai/mazer@docs/demo/assets/compiled/css/app.css
+
+This improves:
+- code organization
+- scalability
+- maintainability
+- separation of concerns
+
+---
+
+# API Fetch Logic
+
+```javascript
+export async function fetchStudents() {
+    try {
+        const response = await fetch('https://dummyjson.com/users');
+        const data = await response.json();
+        return data.users;
+    } catch (error) {
+        console.error('API Error:', error);
+        return [];
+    }
+}
 ```
 
-## Community Mazer-based open sources
+---
 
-- [CodeIgniter 4](https://github.com/irsyadulibad/mazer-codeigniter) by [@irsyadulibad](https://github.com/irsyadulibad)
-- [Laravel Mazer Starter](https://github.com/billalxcode/laravel-mazer-starter) by [@billalxcode](https://github.com/billalxcode)
-- [Nuxt](https://github.com/fzn0x/mazer-nuxt) by [@fzn0x](https://github.com/fzn0x)
-- [React JS Component Library](https://github.com/fachryansyah/react-mazer-ui) by [@fachryansyah](https://github.com/fachryansyah/)
-- [Adonisjs 5](https://github.com/afman42/mazer-adonisjs) by [@afman42](https://github.com/afman42/)
-- [Django](https://github.com/bimbims125/mazer-django) by [@bimbims125](https://github.com/bimbims125/)
-- [Flask](https://github.com/antheiz/mazer-flask) by [@antheiz](https://github.com/antheiz/)
-- [Symfony 6.3 (Mazer 2.1.0)](https://github.com/TheoD02/mazer-symfony-6.3/tree/mazer-2.1.0) by [@theod02](ttps://github.com/TheoD02)
-- [Spring-Thymeleaf](https://github.com/deyhay-enterprise/spring-project-mazer-template) by [@hi-rullah](https://github.com/hi-rullah)
-- [Ruby on Rails](https://github.com/noesya/mazer-rails) by [@noesya](https://github.com/noesya)
-- [Yii2](https://github.com/anovsiradj/yii2-theme-mazer) by [@anovsiradj](https://github.com/anovsiradj)
-- [Next JS](https://github.com/dipras/next-mazer) by [@dipras](https://github.com/dipras)
-- Did you make in another framework or tools? Open up Pull Requests and put yours here! 😃
+# How API Data Is Manipulated
 
-## Contributing
+The raw API data is transformed and rendered dynamically into dashboard components.
 
-Please follow [Contributing Guide](./CONTRIBUTING.md) before contributing.
+---
 
-## License
+## 1. Student Count Calculation
 
-Mazer is under [MIT License](./LICENSE).
+Used for KPI cards.
 
-## Author
+```javascript
+students.length
+```
 
-Mazer is created by <a href="https://saugi.me">Saugi</a>.
+This dynamically calculates the total number of students returned from the API.
 
-## Sponsors
+---
 
-![zuramai's sponsors](https://raw.githubusercontent.com/zuramai/static/main/sponsors.svg)
+## 2. Dynamic Table Rendering
+
+Student data is rendered into the table using DOM manipulation.
+
+```javascript
+students.forEach(student => {
+    tableBody.innerHTML += `
+        <tr>
+            <td>${student.firstName}</td>
+            <td>${student.email}</td>
+        </tr>
+    `;
+});
+```
+
+---
+
+## 3. Status Generation Logic
+
+The API does not provide a student status field.
+
+A custom frontend rule was implemented:
+
+```javascript
+student.age > 25
+```
+
+### Result
+- Age > 25 → Active
+- Age ≤ 25 → Pending
+
+This demonstrates frontend data transformation and business logic handling.
+
+---
+
+## 4. Search Filtering
+
+Implemented live search functionality using:
+- JavaScript filtering
+- event listeners
+- real-time rendering
+
+```javascript
+studentsData.filter(student =>
+    student.firstName.toLowerCase().includes(value)
+)
+```
+
+This dynamically filters:
+- student names
+- emails
+
+without reloading the page.
+
+---
+
+# Analytics Page
+
+An analytics section was added using Chart.js.
+
+## Features
+- Student age distribution
+- Visual data representation
+- Interactive chart rendering
+
+---
+
+# Chart Integration
+
+Chart.js was integrated into the existing Mazer structure instead of creating a custom chart system.
+
+```javascript
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['18-20', '21-25', '26-30'],
+        datasets: [{
+            label: 'Students',
+            data: [12, 19, 7]
+        }]
+    }
+});
+```
+
+---
+
+# Loading State UX
+
+A loading spinner was implemented during API requests.
+
+Purpose:
+- better user feedback
+- improved perceived performance
+- professional UX behavior
+
+---
+
+
+```
+
+---
+
+# Frontend Engineering Decisions
+
+## Why Existing Components Were Reused
+
+The assessment specifically focused on adapting an existing admin dashboard.
+
+Therefore:
+- existing Mazer layouts were preserved
+- Bootstrap components were reused
+- dashboard architecture was extended instead of rebuilt
+
+This reflects real-world frontend development practices.
+
+---
+
+# Key Skills Demonstrated
+
+- Existing codebase adaptation
+- Bootstrap 5 customization
+- Responsive UI design
+- API integration
+- Modular JavaScript architecture
+- Dynamic DOM rendering
+- UX improvements
+- Data visualization
+- Component reuse
+
+---
+
+# Future Improvements
+
+Possible future enhancements:
+- Authentication system
+- Dark/light theme toggle
+- Pagination
+- Student profile pages
+- Backend integration
+- Attendance tracking system
+
+---
+
+# Conclusion
+
+This project demonstrates how an existing admin template can be professionally adapted into a fully functional, data-driven dashboard application using modern frontend development practices.
